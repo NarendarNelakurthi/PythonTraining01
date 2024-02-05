@@ -1,0 +1,44 @@
+#!/usr/bin/python3
+"""
+Purpose: Bank Loan
+
+    Simple Interest : A = P (1 + r/n)^nt
+
+                        A	=	final amount
+                        P	=	initial principal balance
+                        n   =   no of compounding periods per unit time
+                        r	=	annual interest rate
+                        t	=	time (in years)
+
+Ref :https://www.calculatorsoup.com/calculators/financial/simple-interest-plus-principal-calculator.php
+
+"""
+
+# # Method 1 - Hard coding Values
+# borrowed_amount = 10_000 # Principal
+# rate_of_interest = 8.3 /100   # %
+# loan_duration = 10 # years
+
+# Method 2 - Getting values in run-time
+borrowed_amount = int(input("Enter Borrowed Amount:"))
+rate_of_interest = float(input("Enter Rate of Interest :")) / 100
+loan_duration = int(input("Enter loan duration (in years):"))
+compound_period = int(input("no of compounding periods per year : "))
+
+
+
+# A = P (1 + r/n)^nt
+payable_amount  = round(borrowed_amount * (1 + (rate_of_interest/compound_period))**(compound_period*loan_duration))
+interest_amount = payable_amount - borrowed_amount
+
+print("Principle          :", borrowed_amount)
+print("Rate of Interest   :", rate_of_interest)
+print("Loan Duration      :", loan_duration)
+print("Interest amount    :", interest_amount)
+print("total amount to pay:", payable_amount)
+
+
+
+# Assignment
+# 1. Compound Interest Calculation
+#     ref: https://www.calculatorsoup.com/calculators/financial/compound-interest-calculator.php
