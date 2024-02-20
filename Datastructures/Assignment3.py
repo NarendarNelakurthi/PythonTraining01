@@ -6,5 +6,5 @@ person_details = {
     "role": "PM of India",  # latest will be stored
 
 }
-for index,(each_key, each_value) in enumerate(person_details.items()):
-    print(f"{each_key}\t{each_value}")
+for index,(each_key, each_values) in enumerate(person_details.items()):
+    print(f"{each_key}\t{each_values}")
