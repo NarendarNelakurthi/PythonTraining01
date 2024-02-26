@@ -51,3 +51,6 @@ for char in sentence_words:
     else:
         continue
 print(f"The case sentence word count= {sentence_word_count}")
+
+a=case_sensitive.setdefault('M',20)
+print(a)
